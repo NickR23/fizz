@@ -97,7 +97,7 @@ TEST(FizzCommandCommonTest, TestParseECHConfigsSuccess) {
 
   ASSERT_EQ(echConfigs->size(), 1);
   auto echConfig = echConfigs.value()[0];
-  ASSERT_EQ(echConfig.version, ech::ECHVersion::Draft13);
+  ASSERT_EQ(echConfig.version, ech::ECHVersion::Draft15);
 
   folly::io::Cursor cursor(echConfig.ech_config_content.get());
   auto echConfigContent = decode<ech::ECHConfigContentDraft>(cursor);
@@ -129,7 +129,7 @@ TEST(FizzCommandCommonTest, TestParseECHConfigsWithHexNumsSuccess) {
 
   ASSERT_EQ(echConfigs->size(), 1);
   auto echConfig = echConfigs.value()[0];
-  ASSERT_EQ(echConfig.version, ech::ECHVersion::Draft13);
+  ASSERT_EQ(echConfig.version, ech::ECHVersion::Draft15);
 
   folly::io::Cursor cursor(echConfig.ech_config_content.get());
   auto echConfigContent = decode<ech::ECHConfigContentDraft>(cursor);
