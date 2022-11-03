@@ -206,7 +206,7 @@ folly::Optional<std::vector<ech::ECHConfig>> parseECHConfigs(
 
     ech::ECHVersion echVersion;
     if (version == "Draft15") {
-      echVersion = ech::ECHVersion::Draft13;
+      echVersion = ech::ECHVersion::Draft15;
     } else {
       continue;
     }
